@@ -7,85 +7,89 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .neon { text-shadow: 0 0 30px #c026d3; }
+    body { 
+      font-family: 'Inter', system-ui, sans-serif; 
+      background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+    }
+    .neon { text-shadow: 0 0 25px #d1d5db; }
+    .card { background: rgba(31, 31, 31, 0.95); }
   </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="text-white min-h-screen">
 
 <div class="max-w-6xl mx-auto px-6 py-8">
 
   <!-- Top Nav -->
-  <nav class="flex justify-between items-center mb-12">
+  <nav class="flex justify-between items-center mb-16 border-b border-gray-800 pb-6">
     <div class="flex items-center gap-3">
       <span class="text-3xl">💀</span>
-      <h1 class="text-3xl font-bold">TORCH VEIL</h1>
+      <h1 class="text-3xl font-bold tracking-wider">TORCH VEIL</h1>
     </div>
-    <div class="hidden md:flex gap-8 text-sm">
-      <a href="#" class="hover:text-purple-400">Scripts</a>
-      <a href="#" class="hover:text-purple-400">How to run</a>
-      <a href="#" class="hover:text-purple-400">Channel</a>
-      <a href="#" class="hover:text-purple-400">FAQ</a>
+    <div class="hidden md:flex gap-8 text-sm text-gray-400">
+      <a href="#" class="hover:text-white transition">Scripts</a>
+      <a href="#" class="hover:text-white transition">How to run</a>
+      <a href="#" class="hover:text-white transition">Channel</a>
+      <a href="#" class="hover:text-white transition">FAQ</a>
     </div>
   </nav>
 
   <!-- Hero -->
-  <div class="grid md:grid-cols-2 gap-12 items-center">
+  <div class="grid md:grid-cols-2 gap-16 items-center">
     <div>
-      <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-full px-4 py-1 text-sm mb-6">
-        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+      <div class="inline-flex items-center gap-2 bg-zinc-900 border border-gray-700 rounded-full px-5 py-2 text-sm mb-8">
+        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
         MM2 BASED CONTENT • 100% KEYLESS
       </div>
       
-      <h1 class="text-7xl font-bold leading-none neon mb-6">TORCH<br>VEIL</h1>
-      <p class="text-2xl text-zinc-300 mb-8">free MM2 scripts. copy & run.</p>
+      <h1 class="text-7xl font-bold leading-none neon mb-6 text-white">TORCH<br>VEIL</h1>
+      <p class="text-2xl text-gray-300 mb-8">free MM2 scripts. copy & run.</p>
       
-      <p class="text-zinc-400 max-w-md mb-10">
+      <p class="text-gray-400 max-w-md mb-12 leading-relaxed">
         Welcome to my hub. Every script from my channel lives here: item spawners, dupes, autofarm and more. 
-        No keys, no checkpoints, no nonsense. Paste it into your executor and go.
+        No keys, no checkpoints, no nonsense.
       </p>
 
-      <div class="flex gap-4">
-        <button onclick="alert('Scripts section coming soon!')" class="bg-white text-black px-8 py-4 rounded-2xl font-semibold flex items-center gap-3">
+      <div class="flex flex-wrap gap-4">
+        <button onclick="alert('Scripts section coming soon!')" class="bg-white text-black px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 hover:bg-gray-200 transition">
           ⚡ Get the scripts
         </button>
-        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-2xl flex items-center gap-3">
+        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="border border-gray-600 hover:border-gray-400 px-8 py-4 rounded-2xl flex items-center gap-3 transition">
           <i class="fab fa-youtube"></i> Watch on YouTube
         </a>
       </div>
     </div>
 
     <!-- Profile Card -->
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <div class="flex items-center gap-4 mb-8">
+    <div class="card border border-gray-700 rounded-3xl p-8">
+      <div class="flex items-center gap-5 mb-10">
         <img src="https://yt3.ggpht.com/ytc/AIdro_l5zq4z4z4z4z4z4z4z4z4z4z4z4z4z4z4z4=s88-c-k-c0x00ffffff-no-rj" 
-             alt="Torch Veil" class="w-16 h-16 rounded-2xl">
+             alt="Torch Veil" class="w-20 h-20 rounded-2xl border border-gray-600">
         <div>
-          <h3 class="font-semibold text-xl">Torch Veil</h3>
-          <p class="text-zinc-400">@ScriptDox</p>
+          <h3 class="font-bold text-2xl">Torch Veil</h3>
+          <p class="text-gray-400">@ScriptDox</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 text-center mb-8">
+      <div class="grid grid-cols-3 gap-6 text-center mb-10">
         <div>
-          <div class="text-2xl font-bold">2.9K</div>
-          <div class="text-xs text-zinc-500">SUBSCRIBERS</div>
+          <div class="text-3xl font-bold text-white">2.9K</div>
+          <div class="text-xs tracking-widest text-gray-500 mt-1">SUBSCRIBERS</div>
         </div>
         <div>
-          <div class="text-2xl font-bold">80</div>
-          <div class="text-xs text-zinc-500">VIDEOS</div>
+          <div class="text-3xl font-bold text-white">80</div>
+          <div class="text-xs tracking-widest text-gray-500 mt-1">VIDEOS</div>
         </div>
         <div>
-          <div class="text-2xl font-bold">ROBLOX</div>
-          <div class="text-xs text-zinc-500">NICHE</div>
+          <div class="text-3xl font-bold text-white">ROBLOX</div>
+          <div class="text-xs tracking-widest text-gray-500 mt-1">NICHE</div>
         </div>
       </div>
 
       <div class="flex gap-3">
-        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-3 rounded-2xl text-center flex items-center justify-center gap-2">
+        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-4 rounded-2xl text-center flex items-center justify-center gap-2 transition">
           <i class="fab fa-youtube"></i> YouTube
         </a>
-        <a href="https://www.tiktok.com/@torchveil" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-3 rounded-2xl text-center flex items-center justify-center gap-2">
+        <a href="https://www.tiktok.com/@torchveil" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-4 rounded-2xl text-center flex items-center justify-center gap-2 transition">
           <i class="fab fa-tiktok"></i> TikTok
         </a>
       </div>
