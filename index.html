@@ -8,54 +8,56 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .neon { text-shadow: 0 0 20px #c026d3; }
+    .neon { text-shadow: 0 0 25px #c026d3; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-<div class="max-w-5xl mx-auto px-6 py-10">
+<div class="max-w-5xl mx-auto px-6 py-12">
 
-  <div class="flex justify-between items-center mb-16">
+  <!-- Header -->
+  <div class="flex items-center justify-between mb-16">
     <div class="flex items-center gap-4">
-      <span class="text-5xl">🔥</span>
+      <div class="text-5xl">🔥</div>
       <h1 class="text-4xl font-bold neon">Testol Hub</h1>
     </div>
-    <p class="text-zinc-400">Free • Keyless • MM2 Scripts</p>
+    <p class="text-zinc-400">Free Keyless MM2 Scripts</p>
   </div>
 
   <div class="text-center mb-16">
-    <h2 class="text-5xl font-bold mb-3">Copy. Paste. Dominate.</h2>
-    <p class="text-zinc-400">All scripts from my YouTube channel</p>
+    <h2 class="text-6xl font-bold mb-4">Copy. Paste. Dominate.</h2>
+    <p class="text-xl text-zinc-400">All scripts from Testol's channel • No keys • Updated daily</p>
   </div>
 
-  <div class="space-y-10">
+  <div class="space-y-12">
 
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <div class="flex justify-between items-start">
-        <div>
-          <h3 class="text-2xl font-semibold">Testol Loader</h3>
-          <p class="text-emerald-400 text-sm mt-1">RECOMMENDED • ALL-IN-ONE</p>
-        </div>
-        <span class="bg-emerald-500/20 text-emerald-400 text-xs px-3 py-1 rounded-full">NEW</span>
+    <!-- Loader -->
+    <div class="bg-zinc-900 border border-purple-500/30 rounded-3xl p-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="bg-emerald-500 text-black text-xs font-bold px-4 py-1.5 rounded-full">RECOMMENDED</span>
       </div>
-      <pre class="mt-6 bg-black p-6 rounded-2xl font-mono text-sm overflow-auto">loadstring(game:HttpGet("https://testolhub.vercel.app/scripts/testol_loader.lua"))()</pre>
-      <button onclick="copyScript(this)" class="mt-6 w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
-        <i class="fas fa-copy"></i> Copy Script
+      <h3 class="text-3xl font-bold mb-2">Testol Loader</h3>
+      <p class="text-zinc-400 mb-8">All-in-One Hub + Autofarm + Spawner</p>
+      <pre class="bg-black p-8 rounded-2xl font-mono text-sm mb-8 overflow-x-auto">loadstring(game:HttpGet("https://testolhub.vercel.app/scripts/testol_loader.lua"))()</pre>
+      <button onclick="copyScript(this)" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 py-5 rounded-2xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-105 transition">
+        <i class="fas fa-copy"></i> Copy Loader
       </button>
     </div>
 
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <h3 class="text-2xl font-semibold">Testol Hub</h3>
-      <p class="text-zinc-400 mt-2">Silent Aim • ESP • Autofarm</p>
-      <pre class="mt-6 bg-black p-6 rounded-2xl font-mono text-sm overflow-auto">getgenv().SCRIPT_KEY = "KEYLESS"
+    <!-- Main Hub -->
+    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-10">
+      <h3 class="text-3xl font-bold mb-2">Testol Hub</h3>
+      <p class="text-zinc-400 mb-8">Silent Aim • ESP • Autofarm • More</p>
+      <pre class="bg-black p-8 rounded-2xl font-mono text-sm mb-8 overflow-x-auto">getgenv().SCRIPT_KEY = "KEYLESS"
 loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/1712f2ca1470e28a39c092ef78c1855d04adb09310c5f765250ffc21dd667b07/download"))()</pre>
-      <button onclick="copyScript(this)" class="mt-6 w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
+      <button onclick="copyScript(this)" class="w-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 py-5 rounded-2xl font-semibold flex items-center justify-center gap-3">
         <i class="fas fa-copy"></i> Copy Script
       </button>
     </div>
 
   </div>
 
+  <p class="text-center text-zinc-500 text-sm mt-16">Clone made for fun • Use at your own risk</p>
 </div>
 
 <script>
@@ -64,11 +66,10 @@ function copyScript(btn) {
   const text = pre.innerText.trim();
   navigator.clipboard.writeText(text).then(() => {
     const original = btn.innerHTML;
-    btn.innerHTML = `<i class="fas fa-check"></i> Copied!`;
-    setTimeout(() => btn.innerHTML = original, 2000);
+    btn.innerHTML = `<i class="fas fa-check"></i> Copied Successfully!`;
+    setTimeout(() => { btn.innerHTML = original; }, 2500);
   });
 }
 </script>
-
 </body>
 </html>
