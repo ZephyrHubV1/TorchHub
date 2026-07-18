@@ -8,66 +8,103 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .neon { text-shadow: 0 0 20px #c026d3; }
+    .neon { text-shadow: 0 0 30px #a855f7; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-<div class="max-w-5xl mx-auto px-6 py-12">
+<div class="max-w-6xl mx-auto px-6 py-8">
 
-  <div class="flex items-center justify-between mb-16">
-    <div class="flex items-center gap-4">
-      <div class="text-5xl">🔥</div>
-      <h1 class="text-4xl font-bold neon">Testol Hub</h1>
+  <!-- Top Nav -->
+  <nav class="flex justify-between items-center mb-12">
+    <div class="flex items-center gap-3">
+      <span class="text-3xl">💀</span>
+      <h1 class="text-3xl font-bold">TESTOL.HUB</h1>
     </div>
-    <p class="text-zinc-400">Free Keyless MM2 Scripts</p>
-  </div>
+    <div class="hidden md:flex gap-8 text-sm">
+      <a href="#" class="hover:text-purple-400">Scripts</a>
+      <a href="#" class="hover:text-purple-400">How to run</a>
+      <a href="#" class="hover:text-purple-400">Channel</a>
+      <a href="#" class="hover:text-purple-400">FAQ</a>
+    </div>
+    <div class="flex gap-3">
+      <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="bg-zinc-900 hover:bg-zinc-800 px-5 py-2 rounded-xl flex items-center gap-2 text-sm">
+        <i class="fab fa-youtube"></i> Subscribe
+      </a>
+      <a href="#" class="bg-white text-black px-6 py-2 rounded-xl font-semibold flex items-center gap-2">
+        Get scripts
+      </a>
+    </div>
+  </nav>
 
-  <div class="text-center mb-16">
-    <h2 class="text-5xl font-bold">Copy. Paste. Dominate.</h2>
-    <p class="text-zinc-400 mt-4">All scripts from my channel • No keys • No checkpoints</p>
-  </div>
+  <!-- Hero -->
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 rounded-full px-4 py-1 text-sm mb-6">
+        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+        MM2 BASED CONTENT • 100% KEYLESS
+      </div>
+      
+      <h1 class="text-7xl font-bold leading-none neon mb-6">TESTOL<br>HUB</h1>
+      <p class="text-2xl text-zinc-300 mb-8">free MM2 scripts. copy & run.</p>
+      
+      <p class="text-zinc-400 max-w-md mb-10">
+        Welcome to my hub. Every script from my channel lives here: item spawners, dupes, autofarm and more. 
+        No keys, no checkpoints, no nonsense.
+      </p>
 
-  <div class="space-y-10">
+      <div class="flex gap-4">
+        <button onclick="alert('Scripts section coming soon!')" class="bg-white text-black px-8 py-4 rounded-2xl font-semibold flex items-center gap-3">
+          ⚡ Get the scripts
+        </button>
+        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="border border-zinc-600 hover:border-zinc-400 px-8 py-4 rounded-2xl flex items-center gap-3">
+          <i class="fab fa-youtube"></i> Watch on YouTube
+        </a>
+      </div>
 
+      <p class="mt-10 text-sm text-zinc-500">Trusted by 2,800+ MM2 players & counting</p>
+    </div>
+
+    <!-- Profile Card -->
     <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <h3 class="text-2xl font-semibold mb-1">Testol Loader</h3>
-      <p class="text-emerald-400 text-sm mb-6">All-in-One Loader (Recommended)</p>
-      <pre class="bg-black p-6 rounded-2xl font-mono text-sm mb-6">loadstring(game:HttpGet("https://testolhub.vercel.app/scripts/testol_loader.lua"))()</pre>
-      <button onclick="copyScript(this)" class="w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold">Copy Script</button>
-    </div>
+      <div class="flex items-center gap-4 mb-8">
+        <img src="https://via.placeholder.com/80" alt="Profile" class="w-16 h-16 rounded-2xl">
+        <div>
+          <h3 class="font-semibold">torchveil</h3>
+          <p class="text-zinc-400 text-sm">@torchveil</p>
+        </div>
+      </div>
 
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <h3 class="text-2xl font-semibold mb-1">Testol Hub</h3>
-      <p class="text-zinc-400 text-sm mb-6">Silent Aim + ESP + Autofarm</p>
-      <pre class="bg-black p-6 rounded-2xl font-mono text-sm mb-6">getgenv().SCRIPT_KEY = "KEYLESS"
-loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/1712f2ca1470e28a39c092ef78c1855d04adb09310c5f765250ffc21dd667b07/download"))()</pre>
-      <button onclick="copyScript(this)" class="w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold">Copy Script</button>
-    </div>
+      <div class="grid grid-cols-3 gap-4 text-center mb-8">
+        <div>
+          <div class="text-2xl font-bold">2.8K</div>
+          <div class="text-xs text-zinc-500">SUBS</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">77</div>
+          <div class="text-xs text-zinc-500">VIDEOS</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold">MM2</div>
+          <div class="text-xs text-zinc-500">NICHE</div>
+        </div>
+      </div>
 
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
-      <h3 class="text-2xl font-semibold mb-1">Item Spawner</h3>
-      <p class="text-zinc-400 text-sm mb-6">Godly + Dupe</p>
-      <pre class="bg-black p-6 rounded-2xl font-mono text-sm mb-6">getgenv().SCRIPT_KEY = "KEYLESS"
-loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/5544098dad9741511fbb33fdf92785ac87683a955eb126c9d87131525da68b61/download"))()</pre>
-      <button onclick="copyScript(this)" class="w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold">Copy Script</button>
+      <div class="flex gap-3">
+        <a href="https://www.youtube.com/@ScriptDox" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-3 rounded-2xl text-center flex items-center justify-center gap-2">
+          <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.tiktok.com/@torchveil" target="_blank" class="flex-1 bg-zinc-800 hover:bg-zinc-700 py-3 rounded-2xl text-center flex items-center justify-center gap-2">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+      </div>
     </div>
-
   </div>
 
 </div>
 
 <script>
-function copyScript(btn) {
-  const pre = btn.previousElementSibling;
-  const text = pre.innerText.trim();
-  navigator.clipboard.writeText(text).then(() => {
-    const original = btn.innerHTML;
-    btn.innerHTML = '✅ Copied!';
-    setTimeout(() => btn.innerHTML = original, 2000);
-  });
-}
+  // You can add copy buttons later
 </script>
-
 </body>
 </html>
