@@ -15,7 +15,6 @@
 
 <div class="max-w-5xl mx-auto px-6 py-12">
 
-  <!-- Header -->
   <div class="flex items-center justify-between mb-16">
     <div class="flex items-center gap-4">
       <div class="text-5xl">🔥</div>
@@ -26,12 +25,11 @@
 
   <div class="text-center mb-16">
     <h2 class="text-6xl font-bold mb-4">Copy. Paste. Dominate.</h2>
-    <p class="text-xl text-zinc-400">All scripts from Testol's channel • No keys • Updated daily</p>
+    <p class="text-xl text-zinc-400">All scripts from Testol's channel • No keys</p>
   </div>
 
   <div class="space-y-12">
 
-    <!-- Loader -->
     <div class="bg-zinc-900 border border-purple-500/30 rounded-3xl p-10">
       <div class="flex items-center gap-3 mb-4">
         <span class="bg-emerald-500 text-black text-xs font-bold px-4 py-1.5 rounded-full">RECOMMENDED</span>
@@ -44,10 +42,9 @@
       </button>
     </div>
 
-    <!-- Main Hub -->
     <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-10">
       <h3 class="text-3xl font-bold mb-2">Testol Hub</h3>
-      <p class="text-zinc-400 mb-8">Silent Aim • ESP • Autofarm • More</p>
+      <p class="text-zinc-400 mb-8">Silent Aim • ESP • Autofarm</p>
       <pre class="bg-black p-8 rounded-2xl font-mono text-sm mb-8 overflow-x-auto">getgenv().SCRIPT_KEY = "KEYLESS"
 loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/1712f2ca1470e28a39c092ef78c1855d04adb09310c5f765250ffc21dd667b07/download"))()</pre>
       <button onclick="copyScript(this)" class="w-full bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 py-5 rounded-2xl font-semibold flex items-center justify-center gap-3">
@@ -57,7 +54,6 @@ loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/1712f2ca
 
   </div>
 
-  <p class="text-center text-zinc-500 text-sm mt-16">Clone made for fun • Use at your own risk</p>
 </div>
 
 <script>
@@ -66,8 +62,8 @@ function copyScript(btn) {
   const text = pre.innerText.trim();
   navigator.clipboard.writeText(text).then(() => {
     const original = btn.innerHTML;
-    btn.innerHTML = `<i class="fas fa-check"></i> Copied Successfully!`;
-    setTimeout(() => { btn.innerHTML = original; }, 2500);
+    btn.innerHTML = `<i class="fas fa-check"></i> Copied!`;
+    setTimeout(() => btn.innerHTML = original, 2000);
   });
 }
 </script>
