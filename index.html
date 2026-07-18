@@ -8,66 +8,64 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .neon { text-shadow: 0 0 15px #c026d3; }
+    .neon { text-shadow: 0 0 20px #c026d3; }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
 <div class="max-w-5xl mx-auto px-6 py-10">
 
-  <!-- Header -->
-  <div class="flex items-center justify-between mb-16">
+  <div class="flex justify-between items-center mb-16">
     <div class="flex items-center gap-4">
-      <div class="text-4xl">🔥</div>
+      <span class="text-5xl">🔥</span>
       <h1 class="text-4xl font-bold neon">Testol Hub</h1>
     </div>
-    <p class="text-zinc-400">Free Keyless MM2 Scripts 2026</p>
+    <p class="text-zinc-400">Free • Keyless • MM2 Scripts</p>
   </div>
 
   <div class="text-center mb-16">
-    <h2 class="text-5xl font-bold mb-4">Copy. Paste. Dominate.</h2>
-    <p class="text-zinc-400 text-lg">All scripts from Testol's channel — No keys, No bullshit</p>
+    <h2 class="text-5xl font-bold mb-3">Copy. Paste. Dominate.</h2>
+    <p class="text-zinc-400">All scripts from my YouTube channel</p>
   </div>
 
-  <div class="grid md:grid-cols-2 gap-8">
+  <div class="space-y-10">
 
-    <!-- Script Cards -->
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-purple-500 transition-all">
-      <h3 class="text-xl font-semibold mb-3">Testol Loader</h3>
-      <p class="text-zinc-400 mb-6 text-sm">Main All-in-One Loader (Recommended)</p>
-      <pre class="bg-black/70 p-5 rounded-2xl text-xs font-mono overflow-x-auto mb-6">loadstring(game:HttpGet("https://testolhub.vercel.app/scripts/testol_loader.lua"))()</pre>
-      <button onclick="copyScript(this)" class="w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-medium">Copy Script</button>
+    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+      <div class="flex justify-between items-start">
+        <div>
+          <h3 class="text-2xl font-semibold">Testol Loader</h3>
+          <p class="text-emerald-400 text-sm mt-1">RECOMMENDED • ALL-IN-ONE</p>
+        </div>
+        <span class="bg-emerald-500/20 text-emerald-400 text-xs px-3 py-1 rounded-full">NEW</span>
+      </div>
+      <pre class="mt-6 bg-black p-6 rounded-2xl font-mono text-sm overflow-auto">loadstring(game:HttpGet("https://testolhub.vercel.app/scripts/testol_loader.lua"))()</pre>
+      <button onclick="copyScript(this)" class="mt-6 w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
+        <i class="fas fa-copy"></i> Copy Script
+      </button>
     </div>
 
-    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8 hover:border-purple-500 transition-all">
-      <h3 class="text-xl font-semibold mb-3">Testol Hub</h3>
-      <p class="text-zinc-400 mb-6 text-sm">Silent Aim + ESP + Autofarm</p>
-      <pre class="bg-black/70 p-5 rounded-2xl text-xs font-mono overflow-x-auto mb-6">getgenv().SCRIPT_KEY = "KEYLESS"
+    <div class="bg-zinc-900 border border-zinc-700 rounded-3xl p-8">
+      <h3 class="text-2xl font-semibold">Testol Hub</h3>
+      <p class="text-zinc-400 mt-2">Silent Aim • ESP • Autofarm</p>
+      <pre class="mt-6 bg-black p-6 rounded-2xl font-mono text-sm overflow-auto">getgenv().SCRIPT_KEY = "KEYLESS"
 loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/1712f2ca1470e28a39c092ef78c1855d04adb09310c5f765250ffc21dd667b07/download"))()</pre>
-      <button onclick="copyScript(this)" class="w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-medium">Copy Script</button>
+      <button onclick="copyScript(this)" class="mt-6 w-full bg-purple-600 hover:bg-purple-700 py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
+        <i class="fas fa-copy"></i> Copy Script
+      </button>
     </div>
 
   </div>
 
-  <div class="mt-12 text-center">
-    <p class="text-xs text-zinc-500">Made as a clone for testing purposes</p>
-  </div>
 </div>
 
 <script>
 function copyScript(btn) {
   const pre = btn.previousElementSibling;
-  const code = pre.innerText.trim();
-  
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.textContent;
-    btn.textContent = "✅ Copied!";
-    btn.style.backgroundColor = "#22c55e";
-    
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.style.backgroundColor = "";
-    }, 2000);
+  const text = pre.innerText.trim();
+  navigator.clipboard.writeText(text).then(() => {
+    const original = btn.innerHTML;
+    btn.innerHTML = `<i class="fas fa-check"></i> Copied!`;
+    setTimeout(() => btn.innerHTML = original, 2000);
   });
 }
 </script>
